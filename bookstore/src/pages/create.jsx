@@ -93,9 +93,7 @@ export default function Create() {
             name="cover"
             onChange={handleOnChangeFile}
           />
-          {!!cover && (
-            <img src={cover} alt="Book cover" className={styles.coverImage} />
-          )}
+          {!!cover && <img src={cover} alt="Book cover" width="150" />}
         </Form.Group>
 
         <Form.Group className="mb-3">

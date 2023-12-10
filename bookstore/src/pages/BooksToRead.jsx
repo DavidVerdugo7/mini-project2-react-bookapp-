@@ -15,11 +15,11 @@ export default function BooksToRead() {
   };
   return (
     <Layout>
-      <Row xs={1} md={2} lg={3} className="g-2">
+      <Row xs={1} md={2} lg={3} className="g-4">
         {favorites.length > 0 ? (
           favorites.map((book) => (
             <Col key={book.id}>
-              <Card className={styles.item}>
+              <Card className="d-flex justify-content-center align-items-center">
                 {book.image_url && (
                   <Card.Img
                     variant="top"
@@ -55,8 +55,8 @@ export default function BooksToRead() {
             </Col>
           ))
         ) : (
-          <Col className="text-center ">
-            <h1>No books added</h1>
+          <Col className="d-flex justify-content-center align-items-center text-center">
+            <h1>No books added 👻</h1>
           </Col>
         )}
       </Row>
