@@ -1,0 +1,81 @@
+import { createContext, useContext } from "react";
+import { useState } from "react";
+
+const AppContext = createContext(null);
+
+export const useAppContext = () => {
+  const context = useContext(AppContext);
+  if (context === undefined) {
+    throw new Error("app context porvider error"); // aqui voy en el video para hacer boton de favoritos
+  }
+  return context;
+};
+
+const AppContextProvider = ({ children }) => {
+  const [favorites, setFavorites] = useState([]);
+
+  const addToFavorites = (book) => {
+    const oldFavorites = [...favorites];
+    const newfavorites = oldFavorites.concat(book);
+    setFavorites(newfavorites);
+  };
+
+  const removeFromFavorites = (id) => {
+    const oldFavorites = [...favorites];
+    const newFavorites = oldFavorites.filter((book) => book.id !== id);
+    setFavorites(newFavorites);
+  };
+
+  return (
+    <AppContext.Provider
+      value={{ favorites, addToFavorites, removeFromFavorites }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
+};
+export default AppContextProvider;
+
+//this is from othe code
+//
+//   function createItem(item) {
+//     const temp = [...items];
+
+//     temp.unshift(item);
+
+//     setItems([...temp]);
+//   }
+
+//   function getItem(id) {
+//     const item = items.find((item) => item.id === id);
+
+//     return item;
+//   }
+
+//   function updateItem(item) {
+//     const index = items.findIndex((i) => i.id === item.id);
+
+//     const temp = [...items];
+
+//     temp[index] = { ...item };
+
+//     return true;
+//   }
+
+//   return (
+//     <AppContext.Provider
+//       value={{
+//         items,
+//         createItem,
+//         getItem,
+//         updateItem,
+//       }}
+//     >
+//       {children}
+//     </AppContext.Provider>
+//   );
+// }
+
+// export function useAppContext() {
+//   return useContext(AppContext);
+// }

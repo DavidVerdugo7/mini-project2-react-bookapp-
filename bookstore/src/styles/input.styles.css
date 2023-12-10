@@ -1,0 +1,29 @@
+.formContainer {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 15px 0;
+}
+
+.title {
+  font-size: 16px;
+  text-align: left;
+}
+
+.input {
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  align-items: flex-start;
+  margin-top: 2em;
+}
+.coverImage {
+  width: 150px;
+  height: auto;
+}
