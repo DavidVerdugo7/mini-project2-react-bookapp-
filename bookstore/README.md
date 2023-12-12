@@ -1,3 +1,9 @@
+Lik to Figma lo-fi book app:
+https://www.figma.com/file/Metnl3HX9bLPKTCFuDdA6k/Miniproject2-bookapp?type=design&node-id=0%3A1&mode=design&t=2hYWN4ZyFzmPxpsP-1
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Description:
 
 The purpose of the Mini Project is to reinforce skills that have been covered in recent modules.Select a data set and analyse it using the techniques learned in recent modules. Prepare and present a 10-minute presentation in class.-----------Rubric:
